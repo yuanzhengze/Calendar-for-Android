@@ -23,7 +23,7 @@
 
 ```mermaid
 graph TD
-    User((用户)) --> View[UI Layer<br/>(Screens & Components)]
+    User((用户)) --> View["UI Layer<br/>(Screens & Components)"]
     View -->|观察状态/触发事件| ViewModel[CalendarViewModel]
     
     subgraph Data Layer
@@ -34,7 +34,7 @@ graph TD
     
     subgraph System Services
         ViewModel -->|设置提醒| ReminderManager
-        ReminderManager -->|调度| AlarmManager[Android AlarmManager]
+        ReminderManager -->|调度| AlarmManager["AlarmManager<br/>(Android AlarmManager)"]
         AlarmManager -->|广播| AlarmReceiver
         AlarmReceiver -->|显示通知| Notification[系统通知]
     end
